@@ -1,14 +1,8 @@
-export function getResponseFromAPI() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const successfulResponse = true;
-
-            if (successfulResponse) {
-                resolve('Data from API');
-            }
-            else {
-                reject(new Error('failed to fetch data from API'));
-            }
-        }, 2000);
-    });
+function getFullResponseFromAPI(success) {
+  return new Promise((resolve, reject) => {
+    if (success) resolve({ status: 200, body: 'Success' });
+    reject(Error('The API is faulty'));
+  });
 }
+
+export default getFullResponseFromAPI;
