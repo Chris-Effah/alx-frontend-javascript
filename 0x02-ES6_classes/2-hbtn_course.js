@@ -1,6 +1,6 @@
 class HolbertonCourse {
   constructor(name, length, students) {
-    if (typeof name !== 'string || typeof length ! == 'number || !Array.isArray(students)){
+    if (typeof name !== 'string' || typeof length !== 'number' || !Array.isArray(students)){
       throw new TypeError('Invalid attribute types');
     }
     
