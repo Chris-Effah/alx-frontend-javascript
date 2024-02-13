@@ -3,6 +3,6 @@ export default function getListStudentIds(studentArray) {
     return [];
   }
 
-  const studentIds = studentArray.map(student => student.id);
+  const studentIds = studentArray.map((student) => student.id);
   return studentIds;
 }
